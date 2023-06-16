@@ -1,1 +1,3 @@
- task 0 compiling preprocessor only
+ task 0. Preprocessor
+ task 1. Compiler
+ task 2. Assembler
