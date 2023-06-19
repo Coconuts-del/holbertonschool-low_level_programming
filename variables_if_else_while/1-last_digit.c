@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the value stored in the variable n  >5, =0, >0
+ * main - prints the last digit of the variable n  >6 ==0 0<n<6
  *
  * Return: Always 0 (Success)
  */
