@@ -4,4 +4,5 @@
 3. alphABET
 4. alphabet soup
 5. Numbers
-7. Numberz
+6. Numberz
+7. Smile in the mirror
