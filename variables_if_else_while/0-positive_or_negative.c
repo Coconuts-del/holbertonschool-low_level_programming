@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h> 
+#include <stdio.h>
 
 /**
  * main - prints the value stored in the variable n  >0, =0, >0
  *
- * Return (0)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
