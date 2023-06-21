@@ -6,3 +6,4 @@ check for alphabeticcharacter
 print sign of e number
 print absolute value of number
 print the last digit of a number
+print schedule of jack bauer
