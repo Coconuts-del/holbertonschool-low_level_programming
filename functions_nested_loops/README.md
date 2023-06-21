@@ -5,3 +5,4 @@ check for lowercase character
 check for alphabeticcharacter
 print sign of e number
 print absolute value of number
+print the last digit of a number
