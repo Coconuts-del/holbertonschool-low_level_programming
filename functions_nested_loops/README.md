@@ -4,3 +4,4 @@ prints the alphabet in lowercase 10 times
 check for lowercase character
 check for alphabeticcharacter
 print sign of e number
+print absolute value of number
