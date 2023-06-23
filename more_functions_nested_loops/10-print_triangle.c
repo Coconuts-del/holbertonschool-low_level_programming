@@ -2,7 +2,7 @@
 
 /**
  * print_triangle -  print triangle
- * @size; size triangle
+ * @size: size triangle
  *
  * Return; (void)
  */
