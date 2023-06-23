@@ -1,34 +1,34 @@
 #include "main.h"
 
 /**
- * print_triangle - function that draws a diagonanl line in the terminal
- * @size: number time to draw # test
- * Return: (void)
+ * print_triangle -  print triangle
+ * @size; size triangle
+ *
+ * Return; (void)
  */
-
 
 void print_triangle(int size)
 {
-	int i, j;
+	int i, j, k;
 
-	for (i = 1; i <= size; i++)
+	if (size <= 0)
 	{
-		for (j = 1; j <= size; j++)
+		_putchar('\n');
+	}
+	else
+	{
+		for (i = 0; i < size; i++)
 		{
-			if (j >= i)
-			{
-				_putchar('#');
-				if (j == size)
-				{
-					_putchar('\n');
-				}
-			}
-			else
+			for (j = size - i; j > 1; j--)
 			{
 				_putchar(' ');
 			}
+			for (k = 0; k <= i; k++)
+			{
+				_putchar('#');
+			}
+
+			_putchar('\n');
 		}
 	}
-	if (size <= 0)
-		_putchar('\n');
 }
