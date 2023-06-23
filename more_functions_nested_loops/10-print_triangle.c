@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - function that draws a diagonanl line in the terminal
- * @size: number time to draw #
+ * @size: number time to draw # test
  * Return: (void)
  */
 
