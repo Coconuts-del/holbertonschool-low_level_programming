@@ -12,6 +12,7 @@ void reverse_array(int *a, int n)
 {
 	int *ptr1, *ptr2;
 	int tmp;
+
 	ptr1 = &a[0];
 	ptr2 = &(a[n - 1]);
 	for ( ; ptr1 < ptr2; ptr1++, ptr2--)
@@ -20,4 +21,4 @@ void reverse_array(int *a, int n)
 		*ptr1 = *ptr2;
 		*ptr2 = tmp;
 	}
-}  
+}
