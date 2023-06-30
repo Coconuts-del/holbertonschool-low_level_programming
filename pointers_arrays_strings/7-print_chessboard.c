@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_chessboard - afficher un  chessboard
+ * print_chessboard - afficher un  chessboard
  * @a  : tableau a 2 dimensisons
  * Return: void
 */
