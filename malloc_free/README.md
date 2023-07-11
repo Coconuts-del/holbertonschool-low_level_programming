@@ -1,4 +1,6 @@
 C - malloc, free
-1 - creates an array of chars, and initializes it with a specific char.
-2 - returns a pointer to a newly allocated space in memory, which contains a copy of the string 
-2 - given as a parameter.	
+0 - creates an array of chars, and initializes it with a specific char.
+1 - returns a pointer to a newly allocated space in memory, which contains a copy of the string 
+1 - given as a parameter.	
+2 - The returned pointer should point to a newly allocated space in memory which contains 
+2 -	the contents of s1, followed by the contents of s2, and null terminated
