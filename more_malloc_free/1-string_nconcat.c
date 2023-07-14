@@ -4,6 +4,7 @@
  * string_nconcat - pointer to a newly allocated space in memory which contains
  * contents of s1 followed by by the first n bytes of s2, and null terminated.
  *
+ * @n  : number of characters to be add to s1
  * @s1 : string to be concatened
  * @s2 : string to be concatened
  * Return:  pointer to the concatened string (success) NULL (failed)
