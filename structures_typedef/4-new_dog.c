@@ -16,7 +16,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *newD;
 	int i, lgN, lgO;
 
-	if (name == NULL || owner == NULL || age <= 0)
+	if (name == NULL || owner == NULL || age < 0)
 		return (NULL);
 	newD = malloc(sizeof(dog_t));
 	if (newD == NULL)
@@ -28,11 +28,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newD);
 		return (NULL);
 	}
-	for (i = 0; i < lgN; i++)
-	{
-		newD->name[i] = name[i];
-	}
-	newD->name[i] = '\0';
 	for (lgO = 0; owner[lgO]; lgO++)
 	newD->owner = malloc(lgO + 1);
 	if (newD->owner == NULL)
@@ -41,12 +36,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newD);
 		return (NULL);
 	}
+	for (i = 0; i < lgN; i++)
+	{
+		newD->name[i] = name[i];
+	}
+	newD->name[i] = '\0';
+	newD->age = age;
 	for (i = 0; i < lgO; i++)
 	{
 		newD->owner[i] = owner[i];
 	}
 	newD->owner[i] = '\0';
-	newD->age = age;
 
 	return (newD);
 }
+
