@@ -7,7 +7,7 @@
  * @age  : float  element of struct dog
  * @owner: char * element of struct dog
  *
- * Description : structure with 3 elements name age owner
+ * Description : structure dog with 3 elements name age owner of a dog
  */
 
 typedef struct dog
@@ -19,4 +19,6 @@ typedef struct dog
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
 #endif
