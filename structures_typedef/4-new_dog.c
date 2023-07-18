@@ -14,40 +14,69 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newD;
-	int i, lgN, lgO;
 
 	if (name == NULL || owner == NULL || age < 0)
 		return (NULL);
-	newD = malloc(sizeof(*newD));
+	newD = malloc(sizeof(dog_t));
 	if (newD == NULL)
 		return (NULL);
-	for (lgN = 0; name[lgN]; lgN++)
-	newD->name = malloc(lgN + 1);
+
+	newD->name = malloc((_strlen(name) + 1) * sizeof(char));
 	if (newD->name == NULL)
 	{
 		free(newD);
 		return (NULL);
 	}
-	for (lgO = 0; owner[lgO]; lgO++)
-	newD->owner = malloc(lgO + 1);
+	newD->name = _strcpy(newD->name, name);
+
+	newD->owner = malloc((_strlen(owner) + 1) * sizeof(char));
 	if (newD->owner == NULL)
 	{
 		free(newD->name);
 		free(newD);
 		return (NULL);
 	}
-	for (i = 0; i < lgN; i++)
-	{
-		newD->name[i] = name[i];
-	}
-	newD->name[i] = '\0';
+	newD->owner = _strcpy(newD->owner, owner);
 	newD->age = age;
-	for (i = 0; i < lgO; i++)
-	{
-		newD->owner[i] = owner[i];
-	}
-	newD->owner[i] = '\0';
 
 	return (newD);
 }
 
+/**
+* _strlen  - returns the length of a string
+*
+* @s : s = valeur de s *s = address of s
+* Return: (int)
+*/
+
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; (s[i] != '\0'); i++)
+	{
+	}
+	return (i);
+}
+
+
+/**
+* _strcpy - copies the string pointed to by src,including (\0)
+* to the buffer pointed to by dest
+*
+* @dest : dest= first element of the array *dest = address of dest
+* @src  : src = first element of the arrau *src  = address of src
+* Return: (void)
+*/
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = src[i];
+	return (dest);
+}
