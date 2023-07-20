@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 
 	if (argc != 4)
 	{
-		printf("Error \n");
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	f_op = get_op_func(argv[2]);
 	if (f_op == NULL)
 	{
-		printf("Error \n");
+		printf("Error\n");
 		exit(99);
 	}
 	result = f_op(num1, num2);
