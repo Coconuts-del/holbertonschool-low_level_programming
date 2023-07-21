@@ -1,10 +1,10 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - sum of all its parameters
+ * print_numbers - prints numbers, followed by a new line
  * @separator : argument contains string to be printed between arguments
  * @n :  argument contains number of arguments of variadic argument
- * @... : variadic argument
+ * @... : variadic argument of type int
  * Return: nothing
  */
 
