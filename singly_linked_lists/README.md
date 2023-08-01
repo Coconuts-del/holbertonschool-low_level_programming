@@ -15,19 +15,20 @@
 
 Please use this data structure for this project:
 
-/**
-  struct list_s - singly linked list
-  @str: string - (malloc'ed string)
-  @len: length of the string
-  @next: points to the next node
-  Description: singly linked list node structure */
+-/**
+-  struct list_s - singly linked list
+-  @str: string - (malloc'ed string)
+-  @len: length of the string
+-  @next: points to the next node
+-  Description: singly linked list node structure 
+-*/
 
-typedef struct list_s
-{
-    char *str;
-    unsigned int len;
-    struct list_s *next;
-} list_t;
+- typedef struct list_s
+-{
+-    char *str;
+-    unsigned int len;
+-    struct list_s *next;
+-} list_t;
 
 ### **0. Print list**
 
@@ -42,7 +43,6 @@ typedef struct list_s
 * Write a function that adds a new node at the beginning of a list_t list.
 
 ### **3. Add node at the end**
-mandatory
 
 * Write a function that adds a new node at the end of a list_t list.
 
