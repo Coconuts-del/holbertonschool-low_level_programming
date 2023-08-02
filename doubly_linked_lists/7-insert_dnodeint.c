@@ -31,15 +31,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	/*search position in the list*/
 	temp = *h;
+	/* insertion before the given position*/
+	idx--;
 	for (i = 0; temp  && i < idx; i++)
 	{
 		temp = temp->next;
 	}
-
-	/* allowe insertion before the given position*/
-	temp = temp->prev;
 	/* insertion*/
-	if (i == idx)
+	if (i == idx && temp)
 	{
 		nNode->prev = temp;
 		nNode->next = temp->next;
