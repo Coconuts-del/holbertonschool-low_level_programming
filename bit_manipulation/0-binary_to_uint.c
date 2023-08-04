@@ -8,11 +8,11 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-    unsigned int n = 0 ;
+	unsigned int n = 0;
 
 	if (b == NULL)
 		return (0);
-   
+
 	while (*b)
 	{
 		if (*b != '1' && *b != '0')
@@ -22,5 +22,5 @@ unsigned int binary_to_uint(const char *b)
 			n = n | 1;
 		b++;
 	}
-    return (n);
+	return (n);
 }
