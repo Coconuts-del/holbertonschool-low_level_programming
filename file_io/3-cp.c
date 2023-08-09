@@ -47,8 +47,8 @@ int main(int ac, char **av)
 
 	do {
 		rd = read(fd1, buffer, 1024);
-		wr = write(fd2, buffer, rd);
-	} while (rd == 1024);
+		wr = write(fd2, buffer, rd); }
+	while (rd == 1024);
 
 	if (rd < 0)
 	{	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
