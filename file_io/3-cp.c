@@ -9,7 +9,7 @@ int closeFic(int fd)
 {
 	if (close(fd) < 0)
 	{
-		dprintf(2, "Error: Can't close %d\n", fd);
+		dprintf(2, "Error: Can't close fd %d\n", fd);
 		return (100);
 	}
 	return (0);
@@ -31,12 +31,12 @@ int main(int ac, char **av)
 	char buffer[1024];
 
 	if (ac != 3)
-	{   dprintf(2, "Usage:cp file_from file_to\n");
+	{   dprintf(2, "Usage: cp file_from file_to\n");
 		return (97);
 	}
 	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
-	{   dprintf(2, "Error: Can't read from %s\n", av[1]);
+	{   dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		return (98);
 	}
 	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
