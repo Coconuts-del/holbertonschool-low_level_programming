@@ -21,7 +21,7 @@ int closeFic(int fd)
  * @av  : list of arguments
  *
  * Return: 97 incorrect number of arguments
- *         98 first file does not exit or unreadbke
+ *         98 first file does not exit or unreadable
  *         99 can't write in second file
  *        100 close failed
  */
@@ -31,12 +31,14 @@ int main(int ac, char **av)
 	char buffer[1024];
 
 	if (ac != 3)
-	{   dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		return (97); }
+	{	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		return (97);
+	}
 	fd1 = open(av[1], O_RDONLY);
 	if (fd1 == -1)
 	{   dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		return (98); }
+		return (98);
+	}
 	fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{   dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
@@ -50,10 +52,12 @@ int main(int ac, char **av)
 
 	if (rd < 0)
 	{   dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		return (98); }
+		return (98);
+	}
 	if (wr < 0)
 	{	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		return (99); }
+		return (99);
+	}
 
 	if (closeFic(fd1) !=  0  ||  closeFic(fd2) != 0)
 		return (100);
