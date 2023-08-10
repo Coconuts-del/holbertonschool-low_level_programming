@@ -3,7 +3,7 @@
 /**
  * key_index - function gives the index of a key
  * @key : string used to generate hash value
- * size : size of the array
+ * @size : size of the array
  * Return: index (hash value % size)
  */
 
