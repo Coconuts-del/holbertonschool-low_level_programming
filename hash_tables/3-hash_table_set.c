@@ -2,8 +2,8 @@
 
 /**
  * hash_table_set - adds an element to the hash table
- * @ht :   add or update the key/value of this hash table
- * @key :   key
+ * @ht :   pointer to the hash table
+ * @key :   key to add
  * @value :  value associated with the key
  * Return: 1(success) 0(failed)
  */
@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 	}
 
-/* add in beginning of the linked list */
+/* add the new Node in beginning of the linked list */
 	newNode = malloc(sizeof(hash_node_t *));
 	if (newNode == NULL)
 		return (0);
