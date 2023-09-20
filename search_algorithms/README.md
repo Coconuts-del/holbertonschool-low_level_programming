@@ -40,7 +40,8 @@
 
 *  indicate space complexity  of this function
 
-`
+```
+  
 int **allocate_map(int n, int m)
 {
      int **map;
@@ -52,7 +53,8 @@ int **allocate_map(int n, int m)
      }
      return (map);
 }
-`  
+  
+```  
 
 
 ## **Compilation** :fast_forward:
