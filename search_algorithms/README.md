@@ -39,7 +39,8 @@
 ### **6.Big O #04**
 
 *  indicate space complexity  of this function
-'''int **allocate_map(int n, int m)
+'''
+int **allocate_map(int n, int m)
 {
      int **map;
 
@@ -49,7 +50,8 @@
           map[i] = malloc(sizeof(int) * m);
      }
      return (map);
-}'''
+}
+'''
 
 
 
