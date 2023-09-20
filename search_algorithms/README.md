@@ -39,7 +39,8 @@
 ### **6.Big O #04**
 
 *  indicate space complexity  of this function
-'''
+
+` allocate_map `
 int **allocate_map(int n, int m)
 {
      int **map;
@@ -51,7 +52,7 @@ int **allocate_map(int n, int m)
      }
      return (map);
 }
-'''
+
 
 
 
